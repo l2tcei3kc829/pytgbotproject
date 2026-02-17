@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven{ url "https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository" }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation("org.telegram:telegrambots:5.1.1")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+    implementation 'ch.qos.logback:logback-core:1.4.14'
+    implementation 'com.github.Anuken.Arc:arc-core:v146'
+}
+
+kotlin {
+    jvmToolchain(23)
+}
+
+tasks.withType(Jar).configureEach {
+    archiveFileName.set("proj.jar")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest.attributes.put("Main-Class", "Main")
+    from{
+        //include("logback.xml")
+        configurations.runtimeClasspath.collect{it.isDirectory() ? it : zipTree(it)}
+    }
+}

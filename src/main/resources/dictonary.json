@@ -1,0 +1,991 @@
+{
+  "partitions": [
+    {
+      "name": "Базовые функции",
+      "package": "",
+      "funcs": [
+        [
+          "abs",
+          "Return the absolute value of the argument.",
+          "Вернуть абсолютное значение аргумента."
+        ],
+        [
+          "aiter",
+          "Return an AsyncIterator for an AsyncIterable object.",
+          "Верните асинцитератор для асинцитерного объекта."
+        ],
+        [
+          "all",
+          "Return True if bool(x) is True for all values x in the iterable.\n\nIf the iterable is empty, return True.",
+          "Вернуть True, если Bool (x) верно для всех значений x в иерных.\n\nЕсли итерабильный пуст, верните True."
+        ],
+        [
+          "anext",
+          "async anext(aiterator[, default])\n\nReturn the next item from the async iterator.  If default is given and the async\niterator is exhausted, it is returned instead of raising StopAsyncIteration.",
+          "Async Anext (Aiterator [, по умолчанию])\n\nВерните следующий элемент из асинхронного итератора.  Если по умолчанию дано и асинхронно\nИтератор исчерпана, он возвращается вместо того, чтобы повысить остановку."
+        ],
+        [
+          "any",
+          "Return True if bool(x) is True for any x in the iterable.\n\nIf the iterable is empty, return False.",
+          "Верните True, если Bool (x) верно для любого x в итерапии.\n\nЕсли итерабильный пуст, верните ложь."
+        ],
+        [
+          "ascii",
+          "Return an ASCII-only representation of an object.\n\nAs repr(), return a string containing a printable representation of an\nobject, but escape the non-ASCII characters in the string returned by\nrepr() using \\\\x, \\\\u or \\\\U escapes. This generates a string similar\nto that returned by repr() in Python 2.",
+          "Верните только ASCII представление объекта.\n\nКак repr (), верните строку, содержащую печатное представление\nобъект, но избегайте не ASCII символов в строке, возвращенной\nrepr () Использование \\\\ x, \\\\ u или \\\\ u убегает. Это генерирует строку, похожую\nк этому возвращено repr () в Python 2."
+        ],
+        [
+          "bin",
+          "Return the binary representation of an integer.\n\n>>> bin(2796202)\n'0b1010101010101010101010'",
+          "Вернуть двоичное представление целого числа.\n\n>>> bin (2796202)\n'0b1010101010101010101010'"
+        ],
+        [
+          "breakpoint",
+          "breakpoint(*args, **kws)\n\nCall sys.breakpointhook(*args, **kws).  sys.breakpointhook() must accept\nwhatever arguments are passed.\n\nBy default, this drops you into the pdb debugger.",
+          "точка останова (*args, ** kws)\n\nПозвоните Sys.Breakpointhook (*args, ** kws).  sys.breakpointhook () должен принять\nКакие бы аргументы прошли.\n\nПо умолчанию это бросает вас в отладчик PDB."
+        ],
+        [
+          "callable",
+          "Return whether the object is callable (i.e., some kind of function).\n\nNote that classes are callable, as are instances of classes with a\n__call__() method.",
+          "Верните, является ли объект вызовом (то есть какая -то видная функция).\n\nОбратите внимание, что классы можно вызовать, как и случаи классов с\n__call __ () Метод."
+        ],
+        [
+          "chr",
+          "Return a Unicode string of one character with ordinal i; 0 <= i <= 0x10ffff.",
+          "Вернуть строку Unicode из одного символа с порядком I; 0 <= i <= 0x10ffff."
+        ],
+        [
+          "compile",
+          "Compile source into a code object that can be executed by exec() or eval().\n\nThe source code may represent a Python module, statement or expression.\nThe filename will be used for run-time error messages.\nThe mode must be 'exec' to compile a module, 'single' to compile a\nsingle (interactive) statement, or 'eval' to compile an expression.\nThe flags argument, if present, controls which future statements influence\nthe compilation of the code.\nThe dont_inherit argument, if true, stops the compilation inheriting\nthe effects of any future statements in effect in the code calling\ncompile; if absent or false these statements do influence the compilation,\nin addition to any features explicitly specified.",
+          "Скомпилируйте источник в кодовый объект, который может быть выполнен exc () или eval ().\n\nИсходный код может представлять модуль, оператор или выражение Python.\nИмя файла будет использоваться для сообщений об ошибках времени выполнения.\nРежим должен быть «exec», чтобы скомпилировать модуль, «сингл», чтобы скомпилировать\nОдиночный (интерактивный) оператор, или «Eval», чтобы скомпилировать выражение.\nАргумент флагов, если они присутствуют, контролирует, какие будущие утверждения влияют\nКомпиляция кода.\nАргумент Dont_Inherit, если это правда, останавливает унаследование компиляции\nВлияние любых будущих заявлений, действующих в кодовом вызове\nкомпилировать; Если отсутствовать или ложь, эти утверждения влияют на компиляцию,\nВ дополнение к любым явно указанным функциям."
+        ],
+        [
+          "delattr",
+          "Deletes the named attribute from the given object.\n\ndelattr(x, 'y') is equivalent to ``del x.y``",
+          "Удаляет названный атрибут из данного объекта.\n\nDelattr (x, 'y') эквивалентен `` del x.y``"
+        ],
+        [
+          "dir",
+          "dir([object]) -> list of strings\n\nIf called without an argument, return the names in the current scope.\nElse, return an alphabetized list of names comprising (some of) the attributes\nof the given object, and of attributes reachable from it.\nIf the object supplies a method named __dir__, it will be used; otherwise\nthe default dir() logic is used and returns:\nfor a module object: the module's attributes.\nfor a class object:  its attributes, and recursively the attributes\nof its bases.\nfor any other object: its attributes, its class's attributes, and\nrecursively the attributes of its class's base classes.",
+          "Dir ([объект]) -> Список строк\n\nЕсли вызовут без аргумента, верните имена в текущем объеме.\nИначе верните алфавитный список имен, включающих (некоторые из) атрибутов\nиз данного объекта и атрибутов, достижимых от него.\nЕсли объект поставляет метод с именем __dir__, он будет использоваться; в противном случае\nЛогика по умолчанию dir () используется и возвращает:\nДля объекта модуля: атрибуты модуля.\nдля объекта класса: его атрибуты и рекурсивно атрибуты\nего баз.\nДля любого другого объекта: его атрибуты, атрибуты его класса и\nрекурсивно атрибуты базовых классов своего класса."
+        ],
+        [
+          "divmod",
+          "Return the tuple (x//y, x%y).  Invariant: div*y + mod == x.",
+          "Вернуть кортеж (x // y, x%y).  Инвариант: div*y mod == x."
+        ],
+        [
+          "eval",
+          "Evaluate the given source in the context of globals and locals.\n\nThe source may be a string representing a Python expression\nor a code object as returned by compile().\nThe globals must be a dictionary and locals can be any mapping,\ndefaulting to the current globals and locals.\nIf only globals is given, locals defaults to it.",
+          "Оцените заданный источник в контексте глобалов и местных жителей.\n\nИсточник может быть строкой, представляющей выражение Python\nили объект кода, возвращаемый Compile ().\nГлобалы должны быть словарем, и местные жители могут быть любым картированием,\nдефолт на текущих глобалов и местных жителей.\nЕсли даны только глобалы, местные жители по умолчанию."
+        ],
+        [
+          "exec",
+          "Execute the given source in the context of globals and locals.\n\nThe source may be a string representing one or more Python statements\nor a code object as returned by compile().\nThe globals must be a dictionary and locals can be any mapping,\ndefaulting to the current globals and locals.\nIf only globals is given, locals defaults to it.\nThe closure must be a tuple of cellvars, and can only be used\nwhen source is a code object requiring exactly that many cellvars.",
+          "Выполнить заданный источник в контексте глобалов и местных жителей.\n\nИсточник может быть строкой, представляющей одну или несколько операторов Python\nили объект кода, возвращаемый Compile ().\nГлобалы должны быть словарем, и местные жители могут быть любым картированием,\nдефолт на текущих глобалов и местных жителей.\nЕсли даны только глобалы, местные жители по умолчанию.\nЗакрытие должно быть кортежом сотовых купок и может быть использовано только\nКогда источник является объектом кода, требующим именно столько сотовых пар."
+        ],
+        [
+          "format",
+          "Return value.__format__(format_spec)\n\nformat_spec defaults to the empty string.\nSee the Format Specification Mini-Language section of help('FORMATTING') for\ndetails.",
+          "Возвращаемое значение .__ Формат __ (format_spec)\n\nformat_spec по умолчанию в пустую строку.\nСм. Спецификация формата мини-языковой секции справки («форматирование») для\nподробности."
+        ],
+        [
+          "getattr",
+          "getattr(object, name[, default]) -> value\n\nGet a named attribute from an object; getattr(x, 'y') is equivalent to x.y.\nWhen a default argument is given, it is returned when the attribute doesn't\nexist; without it, an exception is raised in that case.",
+          "getAttr (объект, имя [, по умолчанию]) -> значение\n\nПолучите названный атрибут от объекта; getattr (x, 'y') эквивалентен x.y.\nКогда аргумент по умолчанию дается, он возвращается, когда атрибут нет\nсуществовать; Без этого исключение поднимается в этом случае."
+        ],
+        [
+          "globals",
+          "Return the dictionary containing the current scope's global variables.\n\nNOTE: Updates to this dictionary *will* affect name lookups in the current\nglobal scope and vice-versa.",
+          "Верните словарь, содержащий глобальные переменные текущего объема.\n\nПримечание: обновления этого словаря * повлияют на поиск имени в текущем\nГлобальный объем и наоборот."
+        ],
+        [
+          "hasattr",
+          "Return whether the object has an attribute with the given name.\n\nThis is done by calling getattr(obj, name) and catching AttributeError.",
+          "Верните, есть ли у объекта атрибут с данным именем.\n\nЭто делается, позвонив в Getattr (obj, имя) и поймал атрибут."
+        ],
+        [
+          "hash",
+          "Return the hash value for the given object.\n\nTwo objects that compare equal must also have the same hash value, but the\nreverse is not necessarily true.",
+          "Вернуть значение хэша для данного объекта.\n\nДва объекта, которые сравнивают равные, также должны иметь одинаковое значение хэша, но\nОбратный не обязательно верен."
+        ],
+        [
+          "hex",
+          "Return the hexadecimal representation of an integer.\n\n>>> hex(12648430)\n'0xc0ffee'",
+          "Вернуть шестнадцатеричное представление целого числа.\n\n>>> HEX (12648430)\n'0xc0ffee'"
+        ],
+        [
+          "id",
+          "Return the identity of an object.\n\nThis is guaranteed to be unique among simultaneously existing objects.\n(CPython uses the object's memory address.)",
+          "Вернуть личность объекта.\n\nЭто гарантированно будет уникальным среди одновременно существующих объектов.\n(CPYTHON использует адрес памяти объекта.)"
+        ],
+        [
+          "input",
+          "Read a string from standard input.  The trailing newline is stripped.\n\nThe prompt string, if given, is printed to standard output without a\ntrailing newline before reading input.\n\nIf the user hits EOF (*nix: Ctrl-D, Windows: Ctrl-Z+Return), raise EOFError.\nOn *nix systems, readline is used if available.",
+          "Прочитайте строку из стандартного ввода.  Тяжелая новая линия разделен.\n\nСтрока приглашения, если указана, напечатана на стандартный выход без\nТропинг Newline перед чтением ввода.\n\nЕсли пользователь попадает в EOF (*nix: ctrl-d, Windows: Ctrl-Z return), поднимите EoOferror.\nНа *NIX Systems используется линия чтения, если она доступна."
+        ],
+        [
+          "isinstance",
+          "Return whether an object is an instance of a class or of a subclass thereof.\n\nA tuple, as in ``isinstance(x, (A, B, ...))``, may be given as the target to\ncheck against. This is equivalent to ``isinstance(x, A) or isinstance(x, B)\nor ...`` etc.",
+          "Верните, является ли объект экземпляром класса или его подкласса.\n\nКортеж, как в `` isInstance (x, (a, b, ...)) ``, может быть назначен в качестве цели\nпроверить. Это эквивалентно `` isInstance (x, a) или Isinstance (x, b)\nили ... `` и т. Д."
+        ],
+        [
+          "issubclass",
+          "Return whether 'cls' is derived from another class or is the same class.\n\nA tuple, as in ``issubclass(x, (A, B, ...))``, may be given as the target to\ncheck against. This is equivalent to ``issubclass(x, A) or issubclass(x, B)\nor ...``.",
+          "Верните, получен ли «CLS» из другого класса или один и тот же класс.\n\nКортеж, как и в `` issubclass (x, (a, b, ...)) ``, может быть назначен в качестве цели\nпроверить. Это эквивалентно `` issubclass (x, a) или Issubclass (x, b)\nили ... ``."
+        ],
+        [
+          "iter",
+          "iter(iterable) -> iterator\niter(callable, sentinel) -> iterator\n\nGet an iterator from an object.  In the first form, the argument must\nsupply its own iterator, or be a sequence.\nIn the second form, the callable is called until it returns the sentinel.",
+          "iter (итерабильный) -> итератор\niter (callible, sentinel) -> итератор\n\nПолучите итератор от объекта.  В первой форме аргумент должен\nПредоставьте свой собственный итератор или быть последовательности.\nВо второй форме вызываемый вызов вызывается, пока он не вернет Страж."
+        ],
+        [
+          "len",
+          "Return the number of items in a container.",
+          "Вернуть количество элементов в контейнере."
+        ],
+        [
+          "locals",
+          "Return a dictionary containing the current scope's local variables.\n\nNOTE: Whether or not updates to this dictionary will affect name lookups in\nthe local scope and vice-versa is *implementation dependent* and not\ncovered by any backwards compatibility guarantees.",
+          "Верните словарь, содержащий локальные переменные текущего объема.\n\nПРИМЕЧАНИЕ: будут ли обновления этого словаря повлиять на поиск имени в\nлокальная область и наоборот в зависимости от реализации * и не\nпокрывается любыми гарантиями обратной совместимости."
+        ],
+        [
+          "max",
+          "max(iterable, *[, default=obj, key=func]) -> value\nmax(arg1, arg2, *args, *[, key=func]) -> value\n\nWith a single iterable argument, return its biggest item. The\ndefault keyword-only argument specifies an object to return if\nthe provided iterable is empty.\nWith two or more arguments, return the largest argument.",
+          "max (iterable, *[, default = obj, key = func]) -> value\nmax (arg1, arg2, *args, *[, key = func]) -> value\n\nС помощью единого итерабируемого аргумента верните свой самый большой предмет. А\nАргумент только для ключевого слова по умолчанию указывает объект для возврата, если\nПри условии, что иерно пусто.\nС двумя или более аргументами верните самый большой аргумент."
+        ],
+        [
+          "min",
+          "min(iterable, *[, default=obj, key=func]) -> value\nmin(arg1, arg2, *args, *[, key=func]) -> value\n\nWith a single iterable argument, return its smallest item. The\ndefault keyword-only argument specifies an object to return if\nthe provided iterable is empty.\nWith two or more arguments, return the smallest argument.",
+          "мин (итерабильный, *[, default = obj, key = func]) -> value\nмин (arg1, arg2, *args, *[, key = func]) -> value\n\nС помощью единого итерабируемого аргумента верните его самый маленький элемент. А\nАргумент только для ключевого слова по умолчанию указывает объект для возврата, если\nПри условии, что иерно пусто.\nС двумя или более аргументами верните наименьший аргумент."
+        ],
+        [
+          "next",
+          "next(iterator[, default])\n\nReturn the next item from the iterator. If default is given and the iterator\nis exhausted, it is returned instead of raising StopIteration.",
+          "Далее (итератор [, по умолчанию])\n\nВерните следующий элемент из итератора. Если дается дефолт и итератор\nисчерпано, он возвращается вместо того, чтобы повышать остановку."
+        ],
+        [
+          "oct",
+          "Return the octal representation of an integer.\n\n>>> oct(342391)\n'0o1234567'",
+          "Вернуть восьмиугольное представление целого числа.\n\n>>> октябрь (342391)\n'0O1234567'"
+        ],
+        [
+          "open",
+          "Open file and return a stream.  Raise OSError upon failure.\n\nfile is either a text or byte string giving the name (and the path\nif the file isn't in the current working directory) of the file to\nbe opened or an integer file descriptor of the file to be\nwrapped. (If a file descriptor is given, it is closed when the\nreturned I/O object is closed, unless closefd is set to False.)\n\nmode is an optional string that specifies the mode in which the file\nis opened. It defaults to 'r' which means open for reading in text\nmode.  Other common values are 'w' for writing (truncating the file if\nit already exists), 'x' for creating and writing to a new file, and\n'a' for appending (which on some Unix systems, means that all writes\nappend to the end of the file regardless of the current seek position).\nIn text mode, if encoding is not specified the encoding used is platform\ndependent: locale.getencoding() is called to get the current locale encoding.\n(For reading and writing raw bytes use binary mode and leave encoding\nunspecified.) The available modes are:\n\n========= ===============================================================\nCharacter Meaning\n--------- ---------------------------------------------------------------\n'r'       open for reading (default)\n'w'       open for writing, truncating the file first\n'x'       create a new file and open it for writing\n'a'       open for writing, appending to the end of the file if it exists\n'b'       binary mode\n't'       text mode (default)\n'+'       open a disk file for updating (reading and writing)\n========= ===============================================================\n\nThe default mode is 'rt' (open for reading text). For binary random\naccess, the mode 'w+b' opens and truncates the file to 0 bytes, while\n'r+b' opens the file without truncation. The 'x' mode implies 'w' and\nraises an `FileExistsError` if the file already exists.\n\nPython distinguishes between files opened in binary and text modes,\neven when the underlying operating system doesn't. Files opened in\nbinary mode (appending 'b' to the mode argument) return contents as\nbytes objects without any decoding. In text mode (the default, or when\n't' is appended to the mode argument), the contents of the file are\nreturned as strings, the bytes having been first decoded using a\nplatform-dependent encoding or using the specified encoding if given.\n\nbuffering is an optional integer used to set the buffering policy.\nPass 0 to switch buffering off (only allowed in binary mode), 1 to select\nline buffering (only usable in text mode), and an integer > 1 to indicate\nthe size of a fixed-size chunk buffer.  When no buffering argument is\ngiven, the default buffering policy works as follows:\n\n* Binary files are buffered in fixed-size chunks; the size of the buffer\nis chosen using a heuristic trying to determine the underlying device's\n\"block size\" and falling back on `io.DEFAULT_BUFFER_SIZE`.\nOn many systems, the buffer will typically be 4096 or 8192 bytes long.\n\n* \"Interactive\" text files (files for which isatty() returns True)\nuse line buffering.  Other text files use the policy described above\nfor binary files.\n\nencoding is the name of the encoding used to decode or encode the\nfile. This should only be used in text mode. The default encoding is\nplatform dependent, but any encoding supported by Python can be\npassed.  See the codecs module for the list of supported encodings.\n\nerrors is an optional string that specifies how encoding errors are to\nbe handled---this argument should not be used in binary mode. Pass\n'strict' to raise a ValueError exception if there is an encoding error\n(the default of None has the same effect), or pass 'ignore' to ignore\nerrors. (Note that ignoring encoding errors can lead to data loss.)\nSee the documentation for codecs.register or run 'help(codecs.Codec)'\nfor a list of the permitted encoding error strings.\n\nnewline controls how universal newlines works (it only applies to text\nmode). It can be None, '', '\\n', '\\r', and '\\r\\n'.  It works as\nfollows:\n\n* On input, if newline is None, universal newlines mode is\nenabled. Lines in the input can end in '\\n', '\\r', or '\\r\\n', and\nthese are translated into '\\n' before being returned to the\ncaller. If it is '', universal newline mode is enabled, but line\nendings are returned to the caller untranslated. If it has any of\nthe other legal values, input lines are only terminated by the given\nstring, and the line ending is returned to the caller untranslated.\n\n* On output, if newline is None, any '\\n' characters written are\ntranslated to the system default line separator, os.linesep. If\nnewline is '' or '\\n', no translation takes place. If newline is any\nof the other legal values, any '\\n' characters written are translated\nto the given string.\n\nIf closefd is False, the underlying file descriptor will be kept open\nwhen the file is closed. This does not work when a file name is given\nand must be True in that case.\n\nA custom opener can be used by passing a callable as *opener*. The\nunderlying file descriptor for the file object is then obtained by\ncalling *opener* with (*file*, *flags*). *opener* must return an open\nfile descriptor (passing os.open as *opener* results in functionality\nsimilar to passing None).\n\nopen() returns a file object whose type depends on the mode, and\nthrough which the standard file operations such as reading and writing\nare performed. When open() is used to open a file in a text mode ('w',\n'r', 'wt', 'rt', etc.), it returns a TextIOWrapper. When used to open\na file in a binary mode, the returned class varies: in read binary\nmode, it returns a BufferedReader; in write binary and append binary\nmodes, it returns a BufferedWriter, and in read/write mode, it returns\na BufferedRandom.\n\nIt is also possible to use a string or bytearray as a file for both\nreading and writing. For strings StringIO can be used like a file\nopened in a text mode, and for bytes a BytesIO can be used like a file\nopened in a binary mode.",
+          "Откройте файл и верните поток.  Поднимите осиррора после неудачи.\n\nФайл - это либо текстовая или байтовая строка, давая имя (и путь\nЕсли файл не в текущем рабочем каталоге) файла в\nбыть открытым или дескриптор файла целочисленного файла, который будет\nобернутый. (Если дается дескриптор файла, он закрыт, когда\nВозвращенный объект ввода/вывода закрыт, если только CloseFD не установлен на false.)\n\nРежим - это необязательная строка, которая указывает режим, в котором файл\nоткрыт. По умолчанию по умолчанию «r», что означает открытие для чтения в тексте\nрежим.  Другие общие значения - «w» для написания (усечение файла, если\nэто уже существует), «x» для создания и написания в новом файле, и\n«А» для добавления (что в некоторых системах Unix означает, что все записывают\nДобавьте к концу файла независимо от текущей позиции поиска).\nВ текстовом режиме, если кодирование не указано, используется кодирование платформы\nЗависимый: locale.getencoding () вызывается для получения текущего кодирования локали.\n(Для чтения и написания сырых байтов используйте двоичный режим и оставьте кодирование\nнеопределенные.) Доступные режимы:\n\n======== ====================================================================\nХарактер Значение\n--------- ---------------------------------------------------------------\n'R' Open для чтения (по умолчанию)\n«W» открыт для написания, сначала усекает файл\n'x' Создайте новый файл и откройте его для написания\n«Открыть для написания, добавить к концу файла, если он существует\nБинарный режим 'B'\nТекстовый режим 't' (по умолчанию)\n'Откройте файл диска для обновления (чтение и написание)\n======== ====================================================================\n\nРежим по умолчанию - «RT» (открыть для чтения текста). Для бинарных случайных\nДоступ, режим «W B» открывает и усекает файл до 0 байтов, в то время как\n«R B» открывает файл без усечения. Режим «X» подразумевает «w» и\nПовышает `fileExisterror`, если файл уже существует.\n\nPython различает файлы, открываемые в бинарных и текстовых режимах,\nДаже когда нет основной операционной системы. Файлы открыты в\nдвоичный режим (добавление «b» в аргумент режима) вернуть содержимое как\nБайты объекты без какого -либо декодирования. В текстовом режиме (по умолчанию или когда\n't' добавляется к аргументу режима), содержимое файла\nвозвращались как струны, байты были сначала декодированы с помощью\nПлатформа-зависимое кодирование или использование указанной кодирования, если указано.\n\nБуферизация - это дополнительное целое число, используемое для установки политики буферизации.\nПропустите 0, чтобы выключить буферизацию (разрешен только в двоичном режиме), 1, чтобы выбрать\nбуферизация линии (только для использования в текстовом режиме) и целое число> 1, чтобы указать\nРазмер чан-буфера с фиксированным размером.  Когда нет буферизации\nДано, политика буферизации по умолчанию работает следующим образом:\n\n* Двоичные файлы буферируются в кусках фиксированного размера; размер буфера\nвыбирается с использованием эвристики, пытаясь определить базовое устройство\n«Размер блока» и возвращение на `io.default_buffer_size`.\nВо многих системах буфер обычно длится 4096 или 8192 байт.\n\n* «Интерактивные» текстовые файлы (файлы, для которых iSatty () возвращает true)\nИспользуйте линейную буферизацию.  Другие текстовые файлы используют политику, описанную выше\nдля двоичных файлов.\n\nкодирование - это имя кодирования, используемого для декодирования или кодирования\nфайл. Это следует использовать только в текстовом режиме. Кодирование по умолчанию\nзависит от платформы, но любая кодировка, поддерживаемая Python\nпрошедший.  См. Модуль Codecs для списка поддерживаемых кодировки.\n\nошибки - это необязательная строка, которая указывает, как ошибки кодирования\nБыть обработанным-этот аргумент не должен использоваться в двоичном режиме. Проходить\n«Строго», чтобы поднять исключение ValueError, если есть ошибка кодирования\n(По умолчанию никто не имеет одинакового эффекта) или пройти «игнорировать», чтобы игнорировать\nошибки. (Обратите внимание, что игнорирование ошибок кодирования может привести к потере данных.)\nСм. Документацию для Codecs.register или запустите «help (codecs.codec)»\nДля списка разрешенных строк ошибок кодирования.\n\nNewline контролирует, как работает Universal Newlines (это относится только к тексту\nрежим). Это может быть никто, '', '\\ n', '\\ r' и '\\ r \\ n'.  Это работает как\nследует:\n\n* При входе, если Newline не является, Universal Newlines Mode\nвключено. Строки на входе могут заканчиваться в '\\ n', '\\ r' или '\\ r \\ n', и\nони переведены в '\\ n' до возвращения в\nвызывающий абонент. Если это '', Universal Newline Режим включена, но строка\nКонец возвращаются в абонент, не перевешенный. Если у него есть что -то из\nдругие юридические значения, входные строки прекращаются только данным\nСтрока, и окончание строки возвращается на вызывающего абонента.\n\n* На выводе, если newline нет, любые написанные символы '\\ n'\nПеревод в систему сепаратора строки по умолчанию, OS.Linesep. Если\nNewline - это '' или '\\ n', перевод не происходит. Если Newline есть\nИз других юридических ценностей любые написанные символы «\\ n» переводятся\nк данной строке.\n\nЕсли CloseFD неверно, базовый дескриптор файла будет открыт\nКогда файл закрыт. Это не работает, когда дано имя файла\nи должен быть правдой в этом случае.\n\nПользовательский новичок может быть использован путем прохождения применения как *открывателя *. А\nбазовый дескриптор файла для объекта файла затем получается\nВызов*Opener*с (*file*,*flags*). * Новичок* должен вернуть открытый\nДескриптор файла (передача OS.Open AS * Opener * приводит к функциональности\nПохоже на прохождение ничего).\n\nopen () возвращает объект файла, тип которого зависит от режима, и\nчерез которые стандартные файловые операции, такие как чтение и написание\nвыполняются. Когда Open () используется для открытия файла в текстовом режиме ('w',\n'r', 'wt', 'rt' и т. Д.), Это возвращает текст. Когда используется для открытия\nФайл в двоичном режиме, возвращаемый класс варьируется: в чтении двоичный\nРежим, он возвращает буферный читатель; В записи бинарной и добавления бинарного\nрежимы, он возвращает буферизатор и в режиме чтения/записи, он возвращает\nбуферист.\n\nТакже можно использовать строку или байторрей в качестве файла для обоих\nЧтение и письмо. Для строк Stringio можно использовать как файл\nОткрыт в текстовом режиме, и для байтов можно использовать байтэзио как файл\nОткрыт в двоичном режиме."
+        ],
+        [
+          "ord",
+          "Return the Unicode code point for a one-character string.",
+          "Верните точку кода Unicode для строки с одним символом."
+        ],
+        [
+          "pow",
+          "Equivalent to base**exp with 2 arguments or base**exp % mod with 3 arguments\n\nSome types, such as ints, are able to use a more efficient algorithm when\ninvoked using the three argument form.",
+          "Эквивалентный базовому ** exp с 2 аргументами или базой ** exp % mod с 3 аргументами\n\nНекоторые типы, такие как INT, способны использовать более эффективный алгоритм, когда\nпризван с использованием трех аргументной формы."
+        ],
+        [
+          "print",
+          "Prints the values to a stream, or to sys.stdout by default.\n\nsep\nstring inserted between values, default a space.\nend\nstring appended after the last value, default a newline.\nfile\na file-like object (stream); defaults to the current sys.stdout.\nflush\nwhether to forcibly flush the stream.",
+          "Отпечатает значения в поток или на sys.stdout по умолчанию.\n\nсентябрь\nстрока вставлена ​​между значениями, по умолчанию пространство.\nконец\nСтрока добавлена ​​после последнего значения, по умолчанию Newline.\nфайл\nфайл, похожий на объект (поток); По умолчанию текущий sys.stdout.\nрумянец\nБудет ли насильно промыть поток."
+        ],
+        [
+          "repr",
+          "Return the canonical string representation of the object.\n\nFor many object types, including most builtins, eval(repr(obj)) == obj.",
+          "Вернуть каноническое представление строки объекта.\n\nДля многих типов объектов, включая большинство встроенных, eval (opj (obj)) == obj."
+        ],
+        [
+          "round",
+          "Round a number to a given precision in decimal digits.\n\nThe return value is an integer if ndigits is omitted or None.  Otherwise\nthe return value has the same type as the number.  ndigits may be negative.",
+          "Окружите номер до данной точности в десятичных цифрах.\n\nВозвратное значение является целым числом, если ndigits опущен или нет.  В противном случае\nВозвратное значение имеет тот же тип, что и номер.  Ндигиты могут быть отрицательными."
+        ],
+        [
+          "setattr",
+          "Sets the named attribute on the given object to the specified value.\n\nsetattr(x, 'y', v) is equivalent to ``x.y = v``",
+          "Устанавливает именованный атрибут на заданный объект на указанное значение.\n\nsetattr (x, 'y', v) эквивалентен `` x.y = v``"
+        ],
+        [
+          "sorted",
+          "Return a new list containing all items from the iterable in ascending order.\n\nA custom key function can be supplied to customize the sort order, and the\nreverse flag can be set to request the result in descending order.",
+          "Верните новый список, содержащий все элементы из итерационного в порядке возрастания.\n\nПользовательская функция ключа может быть предоставлена ​​для настройки порядок сортировки и\nОбратный флаг может быть установлен для запроса результата в порядке убывания."
+        ],
+        [
+          "sum",
+          "Return the sum of a 'start' value (default: 0) plus an iterable of numbers\n\nWhen the iterable is empty, return the start value.\nThis function is intended specifically for use with numeric values and may\nreject non-numeric types.",
+          "Вернуть сумму значения «старта» (по умолчанию: 0) плюс итерабируемое из номеров\n\nКогда итерабильный пуст, верните начальное значение.\nЭта функция предназначена специально для использования с числовыми значениями и может\nОтклонить нечисленные типы."
+        ],
+        [
+          "vars",
+          "vars([object]) -> dictionary\n\nWithout arguments, equivalent to locals().\nWith an argument, equivalent to object.__dict__.",
+          "vars ([object]) -> Словарь\n\nБез аргументов, эквивалентно местным жителям ().\nС аргументом, эквивалентным объекту .__ DICT__."
+        ]
+      ]
+    },
+    {
+      "name": "Модуль math",
+      "package": "math",
+      "funcs": [
+        [
+          "acos",
+          "Вернуть дугу косинус (измеренный в радианах) x.\n\nРезультат от 0 до пи."
+        ],
+        [
+          "acosh",
+          "Вернуть обратную гиперболическую косинус X."
+        ],
+        [
+          "asin",
+          "Вернуть дугу (измеренный в радианах) x.\n\nРезультат между -pi/2 и pi/2."
+        ],
+        [
+          "asinh",
+          "Вернуть обратную гиперболическую синус из x."
+        ],
+        [
+          "atan",
+          "Вернуть дугу тангенс (измеренную в радианах) x.\n\nРезультат между -pi/2 и pi/2."
+        ],
+        [
+          "atan2",
+          "Верните дуговую касательную (измеренную в радианах) y/x.\n\nВ отличие от Atan (y/x), рассматриваются признаки как x, так и y."
+        ],
+        [
+          "atanh",
+          "Вернуть обратную гиперболическую касательную ожог x."
+        ],
+        [
+          "cbrt",
+          "Вернуть корень куба из x."
+        ],
+        [
+          "ceil",
+          "Верните потолок X в качестве интеграла.\n\nЭто самое маленькое целое число> = x."
+        ],
+        [
+          "comb",
+          "Количество способов выбрать k элементов из n элементов без повторения и без заказа.\n\nОценивает N! / (k! * (n - k)!) Когда k <= n и оценивает\nчтобы ноль, когда k> n.\n\nТакже называется биномиальным коэффициентом, потому что он эквивалентен\nк коэффициенту k-th в полиномиальном расширении\nВыражение (1 x) ** n.\n\nПовышает TypeError, если какой -либо из аргументов не является целым числом.\nПовышает valueError, если какой -либо из аргументов отрицательный."
+        ],
+        [
+          "copysign",
+          "Верните поплавок с величиной (абсолютным значением) x, но признак y.\n\nНа платформах, которые поддерживают подписанные нули, CopySign (1.0, -0,0)\nВозвращает -1.0."
+        ],
+        [
+          "cos",
+          "Вернуть косинус X (измеряется в радианах)."
+        ],
+        [
+          "cosh",
+          "Вернуть гиперболический косинус х."
+        ],
+        [
+          "degrees",
+          "Преобразовать угол x из радиан до градусов."
+        ],
+        [
+          "dist",
+          "Верните евклидовое расстояние между двумя точками p и q.\n\nТочки должны быть указаны в виде последовательностей (или итераблев)\nкоординаты.  Оба входа должны иметь одинаковое измерение.\n\nПримерно эквивалентно:\nSQRT (sum ((px - qx) ** 2.0 для px, qx in zip (p, q))))))"
+        ],
+        [
+          "erf",
+          "Функция ошибки при x."
+        ],
+        [
+          "erfc",
+          "Дополнительная функция ошибки при x."
+        ],
+        [
+          "exp",
+          "Возврат E поднят к силе x."
+        ],
+        [
+          "exp2",
+          "Возврат 2, поднятый к силе x."
+        ],
+        [
+          "expm1",
+          "Вернуть exp (x) -1.\n\nЭта функция позволяет избежать потери точности, связанной с прямой оценкой exp (x) -1 для малого x."
+        ],
+        [
+          "fabs",
+          "Вернуть абсолютное значение плавания x."
+        ],
+        [
+          "factorial",
+          "Найдите N !.\n\nПоднимите значение valueError, если x отрицательный или неинтегральный."
+        ],
+        [
+          "floor",
+          "Вернуть пол X в качестве интеграла.\n\nЭто самое большое целое число <= x."
+        ],
+        [
+          "fmod",
+          "Возврат fmod (x, y), в соответствии с платформой C.\n\nx % y может отличаться."
+        ],
+        [
+          "frexp",
+          "Верните мантиссу и показатель X, как пара (M, E).\n\nm - плавание, а E - это int, так что x = m*2. ** e.\nЕсли x равно 0, M и E оба 0. иначе 0,5 <= ABS (M) <1,0."
+        ],
+        [
+          "fsum",
+          "Вернуть точную сумму значений с плавающей запятой в иерном заезде.\n\nПредполагает IEEE-754 арифметику."
+        ],
+        [
+          "gamma",
+          "Гамма -функция при x."
+        ],
+        [
+          "gcd",
+          "Величайший общий делитель."
+        ],
+        [
+          "hypot",
+          "Hypot (*координаты) -> значение\n\nМногомерное евклидовое расстояние от происхождения до точки.\n\nПримерно эквивалентно:\nSQRT (сумма (x ** 2 для x в координатах))\n\nДля двухмерной точки (x, y) дает гипотенузу\nИспользование питагорейской теоремы: SQRT (x*x y*y).\n\nНапример, гипотенуза правого треугольника 3/4/5:\n\n>>> гипот (3.0, 4.0)\n5.0"
+        ],
+        [
+          "isclose",
+          "Определите, близки ли два номера с плавающей запятой по значению.\n\nrel_tol\nмаксимальная разница в том, что его считают «близким» по сравнению с\nвеличина входных значений\nabs_tol\nмаксимальная разница в том, что его считают «близко», независимо от\nвеличина входных значений\n\nВерните True, если A находится в значении для B, и false в противном случае.\n\nЧтобы значения считались близкими, разница между ними\nДолжен быть меньше, чем по крайней мере один из допусков.\n\n-inf, Inf и NAN ведут себя аналогично стандарту IEEE 754.  Что\nЭто, Нэн не близка ни к чему, даже сам.  inf и -inf\nтолько близко к себе."
+        ],
+        [
+          "isfinite",
+          "Верните True, если X не является ни бесконечностью, ни нанкой, и неверно в противном случае."
+        ],
+        [
+          "isinf",
+          "Верните True, если x является положительной или отрицательной бесконечностью, и неверно в противном случае."
+        ],
+        [
+          "isnan",
+          "Верните True, если x - это NAN (не число) и неверно иначе."
+        ],
+        [
+          "isqrt",
+          "Верните целочисленную часть квадратного корня входного ввода."
+        ],
+        [
+          "lcm",
+          "Наименьшее распространенное множественное."
+        ],
+        [
+          "ldexp",
+          "Вернуть X*(2 ** i).\n\nПо сути, это обратный FREXP ()."
+        ],
+        [
+          "lgamma",
+          "Естественный логарифм абсолютного значения гамма -функции при x."
+        ],
+        [
+          "log",
+          "log (x, [base = math.e])\nВернуть логарифм x на данную базу.\n\nЕсли база не указана, возвращает естественный логарифм (база E) x."
+        ],
+        [
+          "log10",
+          "Вернуть базу 10 логарифм x."
+        ],
+        [
+          "log1p",
+          "Вернуть естественный логарифм 1 x (база E).\n\nРезультат вычисляется таким образом, что является точным для x около нуля."
+        ],
+        [
+          "log2",
+          "Вернуть базу 2 логарифм x."
+        ],
+        [
+          "modf",
+          "Вернуть дробные и целочисленные части x.\n\nОба результата несут знак X и являются поплавками."
+        ],
+        [
+          "nextafter",
+          "Вернуть следующее значение с плавающей точкой после x в сторону y."
+        ],
+        [
+          "perm",
+          "Количество способов выбрать k элементов из n элементов без повторения и заказа.\n\nОценивает N! / (n - k)! Когда k <= n и оценивает\nчтобы ноль, когда k> n.\n\nЕсли k не указан или нет, то k по умолчанию в n\nи функция возвращает n!.\n\nПовышает TypeError, если какой -либо из аргументов не является целым числом.\nПовышает valueError, если какой -либо из аргументов отрицательный."
+        ],
+        [
+          "pow",
+          "Вернуть x ** y (x в силу Y)."
+        ],
+        [
+          "prod",
+          "Рассчитайте продукт всех элементов на входном иерном.\n\nНачальное значение по умолчанию для продукта составляет 1.\n\nКогда итерабильный пуст, верните начальное значение.  Эта функция есть\nпредназначен специально для использования с числовыми значениями и может отклонить\nНЕ ЧЕМЕРНЫЕ ТИПЫ."
+        ],
+        [
+          "radians",
+          "Преобразовать угол x из градусов в радиан."
+        ],
+        [
+          "remainder",
+          "Разница между X и ближайшим целым числом, кратно y.\n\nВернуть x - n*y, где n*y - самое близкое целое число, кратное y.\nВ случае, когда x точно на полпути между двумя кратными\ny, используется ближайшее равномерное значение n. Результат всегда точен."
+        ],
+        [
+          "sin",
+          "Вернуть синус X (измерено в радианах)."
+        ],
+        [
+          "sinh",
+          "Вернуть гиперболический синус x."
+        ],
+        [
+          "sqrt",
+          "Вернуть квадратный корень x."
+        ],
+        [
+          "tan",
+          "Вернуть касательную из x (измеряется в радианах)."
+        ],
+        [
+          "tanh",
+          "Вернуть гиперболическую касательную из x."
+        ],
+        [
+          "trunc",
+          "Усекает настоящий X до ближайшего интеграла к 0.\n\nИспользует магический метод __trunc__."
+        ],
+        [
+          "ulp",
+          "Вернуть значение наименее значимого бита плавания x."
+        ]
+      ]
+    },
+    {
+      "name": "Модуль itertools",
+      "package": "itertools",
+      "funcs": [
+        [
+          "tee",
+          "Возвращает кортеж из N независимых итераторов."
+        ]
+      ]
+    },
+    {
+      "name": "Модуль threading",
+      "package": "threading",
+      "funcs": [
+        [
+          "Lock",
+          "allocate_lock () -> объект блокировки\n(Allocate () - устаревший синоним)\n\nСоздайте новый объект блокировки. См. Help (type (thinking.lock ())) для\nИнформация о замках."
+        ],
+        [
+          "RLock",
+          "Заводская функция, которая возвращает новую блокировку повторного въезда.\n\nЗаблокировка повторного ввода должна быть выпущена потоком, которая его приобрела. Однажды а\nПоток приобрел блокировку повторного входа, тот же поток может приобрести его снова\nбез блокировки; Поток должен выпустить его один раз для каждого раз, когда он имеет\nприобрел его."
+        ],
+        [
+          "activeCount",
+          "Верните количество объектов потока в настоящее время живым.\n\nЭта функция устарела, вместо этого используйте Active_Count ()."
+        ],
+        [
+          "active_count",
+          "Верните количество объектов потока в настоящее время живым.\n\nВозвращенный счет равен длине списка, возвращенного\nперечисление ()."
+        ],
+        [
+          "currentThread",
+          "Верните текущий объект потока, соответствующий потоке вызывающего абонента.\n\nЭта функция устарела, вместо этого используйте current_thread ()."
+        ],
+        [
+          "current_thread",
+          "Верните текущий объект потока, соответствующий потоке вызывающего абонента.\n\nЕсли поток контроля вызывающего абонента не был создан через потоки\nМодуль, объект фиктивного потока с ограниченной функциональностью возвращается."
+        ],
+        [
+          "enumerate",
+          "Верните список всех объектов Thread в настоящее время.\n\nСписок включает в себя Daemonic Threads, объекты фиктивных потоков, созданные\ncurrent_thread () и основной поток. Он исключает прекращенные потоки и\nпотоки, которые еще не начались."
+        ],
+        [
+          "excepthook",
+          "ExceptHook (Exc_Type, Exc_Value, Exc_Traceback, Thread)\n\nОбработка uncaught thread.run () Исключение."
+        ],
+        [
+          "get_ident",
+          "get_ident () -> целое число\n\nВернуть ненулевое целое число, которое однозначно идентифицирует текущий поток\nсреди других потоков, которые существуют одновременно.\nЭто может быть использовано для выявления ресурсов для для нагрузки.\nНесмотря на то, что на некоторых платформах может показаться, что идентичность потоков может быть\nвыделенные последовательные числа, начиная с 1, это поведение не должно\nНа полагаться, и на число следует рассматривать исключительно как волшебное печенье.\nЛичность потока может быть повторно использована для другого потока после того, как она выходит."
+        ],
+        [
+          "get_native_id",
+          "get_native_id () -> целое число\n\nВернуть неотрицательное целое число, определяющее поток, как сообщается\nОС (ядро). Это может быть использовано для уникальной идентификации\nконкретный поток в системе."
+        ],
+        [
+          "getprofile",
+          "Получите функцию профилировщика в качестве установленного потоком. STECTPROFILE ()."
+        ],
+        [
+          "gettrace",
+          "Получите функцию трассировки в качестве установленного потоком. Settrace ()."
+        ],
+        [
+          "main_thread",
+          "Вернуть основной объект потока.\n\nВ нормальных условиях основной поток - это нить, из которой\nPython Interprerer был запущен."
+        ],
+        [
+          "setprofile",
+          "Установите функцию профиля для всех потоков, запущенных из потокового модуля.\n\nFunc будет передаваться в sys.setprofile () для каждой потока, прежде чем его\nМетод run () вызывается."
+        ],
+        [
+          "settrace",
+          "Установите функцию трассировки для всех потоков, запущенных из потокового модуля.\n\nFunc будет передаваться в sys.settrace () для каждого потока, до его run ()\nМетод называется."
+        ],
+        [
+          "stack_size",
+          "stack_size ([size]) -> размер\n\nВерните размер стека потока, используемый при создании новых потоков.  А\nНеобязательный аргумент определяет размер стека (в байтах), который будет использоваться\nДля впоследствии созданные потоки и должны быть 0 (используйте платформу или\nНастройка по умолчанию) или положительное целое число составляет не менее 32 768 (32 тыс.).\nПри изменении размера стека потока не поддерживается, ThreadError\nИсключение поднимается.  Если указанный размер недействителен, valueError\nИсключение поднимается, и размер стека не является.  32K байтов\nВ настоящее время минимальное значение поддерживаемого размера стека, чтобы гарантировать\nДостаточное место для стека для самого переводчика.\n\nОбратите внимание, что некоторые платформы могут иметь особые ограничения на значения для\nразмер стека, такой как требующий минимального размера стека, превышающий 32 киб или\nТребование распределения в кратных размера страницы памяти системной памяти\n- Документация на платформе должна быть направлена ​​на получение дополнительной информации\n(4 страницы киб распространены; с использованием кратных 4096 для размера стека\nПредлагаемый подход в отсутствие более конкретной информации)."
+        ]
+      ]
+    },
+    {
+      "name": "Модуль os",
+      "package": "os",
+      "funcs": [
+        [
+          "abort",
+          "Немедленно прервать переводчика.\n\nЭта функция «дает ядро» или иным образом терпит неудачу самым сложным способом\nВ хостинговой операционной системе.  Эта функция никогда не возвращается."
+        ],
+        [
+          "access",
+          "Используйте настоящий UID/GID, чтобы проверить доступ к пути.\n\nпуть\nПуть для проверки; Может быть строка, байты или объект, похожий на путь.\nрежим\nРежим операционной системы Bitfield.  Может быть f_ok для проверки существования,\nили инклюзивные или r_ok, w_ok и x_ok.\ndir_fd\nЕсли нет, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому\nкаталог.\nEffecty_ids\nЕсли True, доступ будет использовать эффективный UID/GID вместо\nнастоящий UID/GID.\nСледуйте_SYMLINKS\nЕсли ложь, а последний элемент пути - символическая связь,\nДоступ изучит саму символическую ссылку вместо файла\nСсылка указывает на.\n\nDIR_FD, Effective_IDS и Pollow_symlinks не могут быть реализованы\nна вашей платформе.  Если они недоступны, использование их поднимет\nNotimplementedError.\n\nОбратите внимание, что большинство операций будут использовать эффективный UID/GID, поэтому это\nПодпрограмма может быть использована в среде Suid/SGID, чтобы проверить, если вызывчивый пользователь\nимеет указанный доступ к пути."
+        ],
+        [
+          "add_dll_directory",
+          "Добавьте путь к пути поиска DLL.\n\nЭтот путь поиска используется при разрешении зависимостей для импорта\nудлинительные модули (сам модуль разрешается через sys.path),\nа также Ctypes.\n\nУдалить каталог, позвонив Close () на возвращаемом объекте или\nИспользуя его в операторе."
+        ],
+        [
+          "chdir",
+          "Измените текущий рабочий каталог на указанный путь.\n\nПуть всегда может быть указан как строка.\nНа некоторых платформах путь также может быть указан как дескриптор открытого файла.\nЕсли эта функция недоступна, использование ее повышает исключение."
+        ],
+        [
+          "chmod",
+          "Измените разрешения на доступ к файлу.\n\nпуть\nПуть быть изменен.  Всегда может быть указан как Str, байты или объект, похожий на путь.\nНа некоторых платформах путь также может быть указан как дескриптор открытого файла.\nЕсли эта функция недоступна, использование ее повышает исключение.\nрежим\nРежим операционной системы Bitfield.\ndir_fd\nЕсли нет, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому\nкаталог.\nСледуйте_SYMLINKS\nЕсли ложь, а последний элемент пути - символическая связь,\nCHMOD изменит саму символическую ссылку вместо файла\nСсылка указывает на.\n\nЭто ошибка использования DIR_FD или Follow_symlinks при определении пути как\nдескриптор открытого файла.\nDIR_FD и Pollow_symlinks не могут быть реализованы на вашей платформе.\nЕсли они недоступны, использование их поднимет NotimplementError."
+        ],
+        [
+          "close",
+          "Закройте дескриптор файла."
+        ],
+        [
+          "closerange",
+          "Закрывает все дескрипторы файлов в [fd_low, fd_high), игнорируя ошибки."
+        ],
+        [
+          "cpu_count",
+          "Вернуть количество процессоров в системе; вернуть нет, если непреодолимо.\n\nЭто число не эквивалентно количеству процессоров, которое может текущий процесс может\nиспользовать.  Количество полезных процессоров можно получить с помощью\n`` len (os.sched_getaffinity (0)) ``"
+        ],
+        [
+          "device_encoding",
+          "Верните строку, описывающую кодирование дескриптора файла терминала.\n\nДескриптор файла должен быть прикреплен к терминалу.\nЕсли устройство не является терминалом, вернуть нет."
+        ],
+        [
+          "dup",
+          "Вернуть дубликат дескриптора файла."
+        ],
+        [
+          "dup2",
+          "Дубликатный дескриптор файла."
+        ],
+        [
+          "execl",
+          "excl (файл, *args)\n\nВыполнить исполняемый файл с помощью списка аргументов ARG, заменив\nтекущий процесс."
+        ],
+        [
+          "execle",
+          "execle (файл, *args, env)\n\nВыполнить исполняемый файл с списком аргументов ARGS и\nEnvironment Env, замена текущего процесса."
+        ],
+        [
+          "execlp",
+          "execlp (файл, *args)\n\nВыполните исполняемый файл (который ищет по пути $)\nС списком аргументов ARGS, замена текущего процесса."
+        ],
+        [
+          "execlpe",
+          "exclpe (файл, *args, env)\n\nВыполните исполняемый файл (который ищет по пути $)\nС списком аргументов Args и Environment Env, заменив текущий\nпроцесс."
+        ],
+        [
+          "execv",
+          "Выполните исполняемый путь с аргументами, заменив текущий процесс.\n\nпуть\nПуть исполняемого файла.\nАргв\nКортеж или список строк."
+        ],
+        [
+          "execve",
+          "Выполните исполняемый путь с аргументами, заменив текущий процесс.\n\nпуть\nПуть исполняемого файла.\nАргв\nКортеж или список строк.\nэн\nСловарь струн, отображаемый по струнам."
+        ],
+        [
+          "execvp",
+          "execvp (file, args)\n\nВыполните исполняемый файл (который ищет по пути $)\nС списком аргументов ARGS, замена текущего процесса.\nARG может быть списком или кортежей струн."
+        ],
+        [
+          "execvpe",
+          "execvpe (file, args, env)\n\nВыполните исполняемый файл (который ищет по пути $)\nс списком аргументов Args и Environment Env, заменив\nтекущий процесс.\nARG может быть списком или кортежей струн."
+        ],
+        [
+          "fdopen",
+          "Нет описания"
+        ],
+        [
+          "fsdecode",
+          "Декодировать имя файла (os.pathlike, байты или Str) из файловой системы\nКодирование с обработчиком ошибок «SurrogateScape», верните Str без изменений. На\nWindows, используйте «строгий» обработчик ошибок, если кодирование файловой системы\n«MBCS» (что является кодированием по умолчанию)."
+        ],
+        [
+          "fsencode",
+          "Кодировать имя файла (os.pathlike, байты или Str) в файловую систему\nКодирование с обработчиком ошибок «SurrogateScape», возвращайте байты без изменений.\nВ Windows используйте «строгий» обработчик ошибок, если кодирование файловой системы\n«MBCS» (что является кодированием по умолчанию)."
+        ],
+        [
+          "fspath",
+          "Вернуть представление пути файловой системы объекта.\n\nЕсли объектом является STR или байты, то позвольте ему пройти через это. Если\nОбъект определяет __fspath __ (), затем возвращает результат этого метода. Все остальное\nТипы поднимают тип -террор."
+        ],
+        [
+          "fstat",
+          "Выполните системный вызов Stat в данном дескрипторе файла.\n\nКак stat (), но для дескриптора открытого файла.\nЭквивалент OS.STAT (FD)."
+        ],
+        [
+          "fsync",
+          "Сила написать FD на диск."
+        ],
+        [
+          "ftruncate",
+          "Обрезайте файл, указанный дескриптором файла, до определенной длины."
+        ],
+        [
+          "get_exec_path",
+          "Возвращает последовательность каталогов, которые будут искать\nНазванный исполняемый файл (аналогично оболочке) при запуске процесса.\n\n* env* Должен быть дикта с переменной среды или нет.  Если * env * нет,\nOs.environ будет использоваться."
+        ],
+        [
+          "get_handle_inheritable",
+          "Получите флаг близкого на Exe указанного дескриптора файла."
+        ],
+        [
+          "get_inheritable",
+          "Получите флаг близкого на Exe указанного дескриптора файла."
+        ],
+        [
+          "get_terminal_size",
+          "Верните размер окна клемма как (столбцы, строки).\n\nНеобязательный аргумент FD (стандартный выход по умолчанию) указывает\nКакой дескриптор файла должен быть запрошен.\n\nЕсли дескриптор файла не подключен к терминалу, оперрор\nброшен.\n\nЭта функция будет определена только в случае реализации\nДоступно для этой системы.\n\nshutil.get_terminal_size-это функция высокого уровня, которая должна\nОбычно используется, OS.Get_terminal_size-это реализация низкого уровня."
+        ],
+        [
+          "getcwd",
+          "Верните строку Unicode, представляющую текущий рабочий каталог."
+        ],
+        [
+          "getcwdb",
+          "Вернуть строку байтов, представляющую текущий рабочий каталог."
+        ],
+        [
+          "getenv",
+          "Получите переменную среды, вернуть нет, если она не существует.\nНеобязательный второй аргумент может указать альтернативный дефолт.\nКлюч, по умолчанию и результат - str."
+        ],
+        [
+          "getlogin",
+          "Вернуть фактическое имя входа в систему."
+        ],
+        [
+          "getpid",
+          "Вернуть текущий идентификатор процесса."
+        ],
+        [
+          "getppid",
+          "Вернуть идентификатор процесса родителей.\n\nЕсли родительский процесс уже вышел, машины Windows все равно останутся\nвернуть свой идентификатор; Другие системы возвращают идентификатор процесса «Инициации» (1)."
+        ],
+        [
+          "isatty",
+          "Верните True, если FD подключен к терминалу.\n\nВернуть True, если дескриптор файла является дескриптором открытого файла\nподключен к рабскому концу терминала."
+        ],
+        [
+          "kill",
+          "Убейте процесс с сигналом."
+        ],
+        [
+          "link",
+          "Создайте жесткую ссылку на файл.\n\nЕсли SRC_DIR_FD или DST_DIR_FD нет, это не должен быть файл\nДескриптор, открытый для каталога, и соответствующую строку пути (SRC или DST)\nдолжен быть относительным; Путь будет относительно этого каталога.\nЕсли следуйте_symlinks ложный, а последний элемент SRC - символический\nссылка, ссылка создаст ссылку на саму символическую ссылку вместо\nПодать ссылку указывает на.\nSRC_DIR_FD, DST_DIR_FD и следующие\nплатформа  Если они недоступны, использование их поднимет\nNotimplementedError."
+        ],
+        [
+          "listdir",
+          "Верните список, содержащий имена файлов в каталоге.\n\nПуть может быть указан как STR, байты или объект, похожий на путь.  Если путь - байты,\nВозвращенные имена файлов также будут байтами; во всех других обстоятельствах\nВозвращенные имена файлов будут Str.\nЕсли путь нет, использует PATH = '.'.\nНа некоторых платформах путь также может быть указан как дескриптор открытого файла; \\\nДескриптор файла должен ссылаться на каталог.\nЕсли эта функция недоступна, используя ее повышает notimplementederror.\n\nСписок в произвольном порядке.  Он не включает в себя специальную\nзаписи. и «..» даже если они присутствуют в каталоге."
+        ],
+        [
+          "lseek",
+          "Установите положение дескриптора файла.  Вернуть новую позицию.\n\nфт\nДескриптор открытого файла, возвращаемый OS.Open ().\nпозиция\nПоложение, интерпретируемое относительно «откуда».\nоткуда\nОтносительная позиция, чтобы искать. Допустимые значения:\n- seek_set: искать с самого начала файла.\n- seek_cur: искать из текущей позиции файла.\n- seek_end: искать с конца файла.\n\nВозвратное значение - это количество байтов относительно начала файла."
+        ],
+        [
+          "lstat",
+          "Выполните системный вызов статистики по данному пути, не следуя символическим ссылкам.\n\nКак stat (), но не следуйте символическим ссылкам.\nЭквивалент статистике (PATH, follow_symlinks = false)."
+        ],
+        [
+          "makedirs",
+          "MakedIrs (name [, mode = 0o777] [, exact_ok = false])\n\nСупер-мкдир; Создайте каталог листьев и все промежуточные.  Работает как\nMkdir, за исключением того, что любой сегмент промежуточного пути (не только самый правый)\nбудет создан, если его не существует. Если целевой каталог уже\nСуществует, поднимите осиррор, если существующий_ok является ложным. В противном случае не исключает\nподнятый.  Это рекурсивно."
+        ],
+        [
+          "mkdir",
+          "Создать каталог.\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError.\n\nАргумент режима игнорируется в Windows. Где он используется, текущий Umask\nЗначение сначала замаскируется."
+        ],
+        [
+          "open",
+          "Откройте файл для низкого уровня IO.  Возвращает дескриптор файла (целое число).\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError."
+        ],
+        [
+          "pipe",
+          "Создать трубу.\n\nВозвращает кортеж из двух файловых дескрипторов:\n(read_fd, write_fd)"
+        ],
+        [
+          "popen",
+          "Нет описания"
+        ],
+        [
+          "putenv",
+          "Изменить или добавить переменную среды."
+        ],
+        [
+          "read",
+          "Читать из дескриптора файла.  Возвращает объект байтов."
+        ],
+        [
+          "readlink",
+          "Верните строку, представляющую путь, на который указывает символическая ссылка.\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\n\nDIR_FD не может быть реализован на вашей платформе.  Если это недоступно,\nИспользование его поднимет NotimplementedError."
+        ],
+        [
+          "remove",
+          "Удалить файл (такой же, как и Unlink ()).\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError."
+        ],
+        [
+          "removedirs",
+          "удаленные (имя)\n\nSuper-rmdir; Удалить каталог листьев и все пустое промежуточное соединение\nи  Работает как rmdir, кроме этого, если каталог листьев\nУспешно удалены, каталоги, соответствующие самым правым пути\nсегменты будут обрезаны до тех пор, пока ни один путь не\nпотребляется или возникает ошибка.  Ошибки на этом последнем этапе\nИгнорируется - они обычно означают, что каталог не был пустым."
+        ],
+        [
+          "rename",
+          "Переименовать файл или каталог.\n\nЕсли SRC_DIR_FD или DST_DIR_FD нет, это не должен быть файл\nДескриптор, открытый для каталога, и соответствующую строку пути (SRC или DST)\nдолжен быть относительным; Путь будет относительно этого каталога.\nSRC_DIR_FD и DST_DIR_FD не могут быть реализованы на вашей платформе.\nЕсли они недоступны, использование их поднимет NotimplementError."
+        ],
+        [
+          "renames",
+          "переименовать (старый, новый)\n\nСупер-Руководитель; Создавайте каталоги по мере необходимости и удалите все левые\nпустой.  Работает как переименование, кроме создания любого промежуточного\nкаталоги, необходимые для того, чтобы сделать новое путь хорошим, предприняты попытки\nпервый.  После переименования каталоги, соответствующие самым правым\nПуть сегменты старого имени будут обрезаны до тех пор, пока ни один\nВесь путь потребляется или найден непустые каталог.\n\nПримечание. Эта функция может выйти из строя с созданной структурой новой каталога\nЕсли вам не хватает разрешений, необходимых для неосведомленного каталога листьев или\nфайл."
+        ],
+        [
+          "replace",
+          "Переименовать файл или каталог, перезаписывая пункт назначения.\n\nЕсли SRC_DIR_FD или DST_DIR_FD нет, это не должен быть файл\nДескриптор, открытый для каталога, и соответствующую строку пути (SRC или DST)\nдолжен быть относительным; Путь будет относительно этого каталога.\nSRC_DIR_FD и DST_DIR_FD не могут быть реализованы на вашей платформе.\nЕсли они недоступны, использование их поднимет NotimplementError."
+        ],
+        [
+          "rmdir",
+          "Удалить каталог.\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError."
+        ],
+        [
+          "scandir",
+          "Верните итератор объектов Direntry для данного пути.\n\nПуть может быть указан как STR, байты или объект, похожий на путь.  Если путь\nэто байты, имена сданных объектов дирижентри также будут байтами; в\nВсе остальные обстоятельства они будут.\n\nЕсли путь нет, использует PATH = '.'."
+        ],
+        [
+          "set_handle_inheritable",
+          "Установите наследуемый флаг указанной ручки."
+        ],
+        [
+          "set_inheritable",
+          "Установите наследуемый флаг указанного дескриптора файла."
+        ],
+        [
+          "spawnl",
+          "spawnl (mode, file, *args) -> integer\n\nВыполнить файл с аргументами из ARGS в подпроцессе.\nЕсли режим == P_NOWAIT вернуть пид процесса.\nЕсли режим == p_wait Вернуть код выхода процесса, если он выходит нормально;\nВ противном случае вернуть -сг, где Sig -это сигнал, который его убил."
+        ],
+        [
+          "spawnle",
+          "Spawnle (режим, файл, *args, env) -> целое число\n\nВыполнить файл с аргументами из ARGS в подпроцессе с\nПоставляемая среда.\nЕсли режим == P_NOWAIT вернуть пид процесса.\nЕсли режим == p_wait Вернуть код выхода процесса, если он выходит нормально;\nВ противном случае вернуть -сг, где Sig -это сигнал, который его убил."
+        ],
+        [
+          "spawnv",
+          "Выполните программу, указанную Path в новом процессе.\n\nрежим\nРежим создания процесса.\nпуть\nПуть исполняемого файла.\nАргв\nКортеж или список строк."
+        ],
+        [
+          "spawnve",
+          "Выполните программу, указанную Path в новом процессе.\n\nрежим\nРежим создания процесса.\nпуть\nПуть исполняемого файла.\nАргв\nКортеж или список строк.\nэн\nСловарь струн, отображаемый по струнам."
+        ],
+        [
+          "startfile",
+          "Запустите файл с соответствующим приложением.\n\nКогда «операция» не указана или «открыта», это действует как\nдважды щелкнув файл в Explorer или дает имя файла в качестве\nАргумент в команду DOS \"Start\": файл открывается с любым\nПрименение (если есть) его расширение связано.\nКогда дана другая «операция», она указывает, что должно быть сделано с\nфайл.  Типичная операция - «Печать».\n\n«аргументы» передаются в заявку, но должны быть опущены, если\nФайл является документом.\n\n«CWD» - это рабочий каталог для операции. Если «FilePath» есть\nОтносительно, это будет решено против этого каталога. Этот аргумент\nОбычно должен быть абсолютный путь.\n\n«Show_cmd» может использоваться для переопределения рекомендуемой опции видимости.\nСмотрите документацию Windows Shellexecute для значений.\n\nstartFile возвращается, как только запускается связанное приложение.\nНет возможности ждать закрытия приложения и никакого пути\nЧтобы получить статус выхода приложения.\n\nFilePath относится к текущему каталогу.  Если вы хотите использовать\nАбсолютный путь, убедитесь, что первый персонаж - это не черта (\"/\");\nОсновная функция Win32 Shellexecute не работает, если она есть."
+        ],
+        [
+          "stat",
+          "Выполните системный вызов статистики по данному пути.\n\nпуть\nПуть для изучения; Может быть строка, байты, похожий на путь объект или\nОткрытый файл-деприктор Int.\ndir_fd\nЕсли нет, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительной строкой; Путь будет относиться к\nэтот каталог.\nСледуйте_SYMLINKS\nЕсли ложь, а последний элемент пути - символическая связь,\nSTAT изучит саму символическую ссылку вместо файла\nСсылка указывает на.\n\nDIR_FD и последующая_SYMLINKS не могут быть реализованы\nна вашей платформе.  Если они недоступны, использование их поднимет\nNotimplementedError.\n\nЭто ошибка использования dir_fd или follow_symlinks при определении пути как\nдескриптор открытого файла."
+        ],
+        [
+          "strerror",
+          "Перевести код ошибки в строку сообщения."
+        ],
+        [
+          "symlink",
+          "Создайте символическую ссылку, указывающую на SRC с именем DST.\n\ntarget_is_directory требуется в Windows, если цель должна быть\nинтерпретируется как каталог.  (В окнах Symlink требует\nWindows 6.0 или выше, и в противном случае поднимает NotimplementError.)\ntarget_is_directory игнорируется на платформах, не являющихся Windows.\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError."
+        ],
+        [
+          "system",
+          "Выполнить команду в подборке."
+        ],
+        [
+          "times",
+          "Верните коллекцию, содержащую информацию о времени процесса.\n\nВозвращенный объект ведет себя как именованный кортеж с этими полями:\n(Utime, Stime, Cutime, CSTIME, ELAPSED_TIME)\nВсе поля являются номерами плавания."
+        ],
+        [
+          "truncate",
+          "Усечь файл, указанный путем, до определенной длины.\n\nНа некоторых платформах путь также может быть указан как дескриптор открытого файла.\nЕсли эта функция недоступна, использование ее повышает исключение."
+        ],
+        [
+          "umask",
+          "Установите текущую числовую UMASK и верните предыдущий UMASK."
+        ],
+        [
+          "unlink",
+          "Удалить файл (так же, как remove ()).\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nDIR_FD не может быть реализован на вашей платформе.\nЕсли это недоступно, использование его поднимет NotimplementError."
+        ],
+        [
+          "unsetenv",
+          "Удалить переменную среды."
+        ],
+        [
+          "urandom",
+          "Верните объект байтов, содержащий случайные байты, подходящие для криптографического использования."
+        ],
+        [
+          "utime",
+          "Установите доступ и измененное время пути.\n\nПуть всегда может быть указан как строка.\nНа некоторых платформах путь также может быть указан как дескриптор открытого файла.\nЕсли эта функция недоступна, использование ее повышает исключение.\n\nЕсли раз не будет, это должен быть кортеж (atime, mtime);\nAtime и Mtime должны быть выражены как секунды с плаванием с момента эпохи.\nЕсли указан NS, это должен быть кортеж (atime_ns, mtime_ns);\natime_ns и mtime_ns должны быть выражены как целочисленные наносекунд\nС эпохи.\nЕсли время не является, а NS не определен, Utime использует текущее время.\nУказание кортежей для оба раза и NS является ошибкой.\n\nЕсли dir_fd не является ничем, это должен быть дескриптор файла, открытый для каталога,\nи путь должен быть относительным; Путь будет относиться к этому каталогу.\nЕсли следуйте_symlinks ложный, а последний элемент пути - символический\nссылка, Utime изменит саму символическую ссылку вместо файла\nСсылка указывает на.\nЭто ошибка использования dir_fd или follow_symlinks при указании пути\nкак дескриптор открытого файла.\ndir_fd и pollow_symlinks могут быть недоступны на вашей платформе.\nЕсли они недоступны, использование их поднимет NotimplementError."
+        ],
+        [
+          "waitpid",
+          "Подождите, чтобы завершить заданный процесс.\n\nВозвращает кортеж информации о процессе:\n(PID, Статус << 8)\n\nАргумент параметров игнорируется в Windows."
+        ],
+        [
+          "waitstatus_to_exitcode",
+          "Преобразовать статус ожидания в код выхода.\n\nНа Unix:\n\n* Если Wifexited (статус) верна, верните WexitStatus (статус).\n* Если wifsignaled (status) верно, вернуть -wtermsig (status).\n* В противном случае поднимите valueError.\n\nВ Windows статус возврата сдвинулся вправо на 8 бит.\n\nНа UNIX, если процесс прослеживается или если waitpid () был вызван с\nОпция WUNTRECED, абонент должен сначала проверить, является ли WIFSTOPPED (статус).\nЭта функция не должна вызывать, если Wifstopped (статус) верна."
+        ],
+        [
+          "walk",
+          "Ошибка перевода: Expecting value: line 1 column 1 (char 0)"
+        ],
+        [
+          "write",
+          "Напишите объект байтов в дескриптор файла."
+        ]
+      ]
+    },
+    {
+      "name": "Модуль sys",
+      "package": "sys",
+      "funcs": [
+        [
+          "addaudithook",
+          "Добавляет новый обратный вызов аудита."
+        ],
+        [
+          "audit",
+          "Аудит (событие, *args)\n\nПередает мероприятие любым подключенным аудиторским крючкам."
+        ],
+        [
+          "breakpointhook",
+          "ОТКРЫТИКА (*Args, ** kws)\n\nЭта функция крючка вызывается встроенной точкой ()."
+        ],
+        [
+          "call_tracing",
+          "Вызовите фанк (*args), в то время как отслеживание включено.\n\nСостояние отслеживания сохраняется и восстанавливается впоследствии.  Это задумано\nбыть вызванным от отладчика с контрольно -пропускного пункта, чтобы рекурсивно отлаживать\nкакой -то другой код."
+        ],
+        [
+          "displayhook",
+          "Распечатайте объект в Sys.stdout, а также сохраните его в Buildins._"
+        ],
+        [
+          "exc_info",
+          "Вернуть текущую информацию об исключении: (введите, значение, Traceback).\n\nВернуть информацию о последнем исключении, пойманном кроме\nпункт в текущей кадре стека или в более старой кадре стека."
+        ],
+        [
+          "excepthook",
+          "Обработайте исключение, отобразив его с помощью Traceback на Sys.stderr."
+        ],
+        [
+          "exception",
+          "Вернуть текущее исключение.\n\nВернуть самое последнее исключение, пойманное кроме пункта\nв текущей кадре стека или в более старой кадре стека, или нет\nЕсли такого исключения не существует."
+        ],
+        [
+          "exit",
+          "Выйдите из интерпретатора, подняв SystemExit (статус).\n\nЕсли статус опущен или нет, он по умолчанию по умолчанию (то есть успех).\nЕсли статус является целым числом, оно будет использоваться в качестве состояния выхода системы.\nЕсли это еще один вид объекта, он будет напечатан и систему\nСтатус выхода будет одним (то есть сбой)."
+        ],
+        [
+          "get_asyncgen_hooks",
+          "Верните установленные асинхронные крючки генераторов.\n\nЭто возвращает названную силу формы (Firstiter, финализатор)."
+        ],
+        [
+          "get_coroutine_origin_tracking_depth",
+          "Проверьте статус отслеживания происхождения для объектов Coroutine в этом потоке."
+        ],
+        [
+          "get_int_max_str_digits",
+          "Верните максимальный предел цифр строковых цифр для невоичных преобразований int <--> Str."
+        ],
+        [
+          "getallocatedblocks",
+          "Верните количество распределенных в настоящее время блоков памяти."
+        ],
+        [
+          "getdefaultencoding",
+          "Верните текущее кодирование по умолчанию, используемое реализацией Unicode."
+        ],
+        [
+          "getfilesystemencodeerrors",
+          "Верните режим ошибки, используемый Unicode в преобразование имени файла ОС."
+        ],
+        [
+          "getfilesystemencoding",
+          "Верните кодирование, используемое для преобразования имен файлов Unicode в имена файлов ОС."
+        ],
+        [
+          "getprofile",
+          "Верните набор функций профилирования с помощью sys.setprofile.\n\nСмотрите главу Profiler в руководстве библиотеки."
+        ],
+        [
+          "getrecursionlimit",
+          "Вернуть текущее значение предела рекурсии.\n\nПредел рекурсии - максимальная глубина интерпретатора Python\nкуча.  Этот предел предотвращает бесконечную рекурсию, вызывая переполнение\nСтека C и сбоя питона."
+        ],
+        [
+          "getrefcount",
+          "Вернуть ссылки на объект.\n\nВозвращенный счет, как правило, на один выше, чем вы могли ожидать,\nпотому что он включает в себя (временную) ссылку как аргумент\ngetRefcount ()."
+        ],
+        [
+          "getsizeof",
+          "getSizeof (object [, default]) -> int\n\nВернуть размер объекта в байтах."
+        ],
+        [
+          "getswitchinterval",
+          "Вернуть текущий интервал переключения потока; См. Sys.SetSwitchInterval ()."
+        ],
+        [
+          "gettrace",
+          "Вернуть набор функций трассировки глобальной отладки с помощью SYS.SetTrace.\n\nСмотрите главу отладчика в руководстве библиотеки."
+        ],
+        [
+          "getwindowsversion",
+          "Верните информацию о запущенной версии Windows как именованная кортеж.\n\nУчастники названы: майор, несовершеннолетний, сборка, платформа, service_pack,\nservice_pack_major, service_pack_minor, suite_mask, product_type и\nPlatform_version. Для обратной совместимости только первые 5 элементов\nдоступны по индексации. Все элементы - это числа, кроме\nservice_pack и platform_type, которые являются строками и платформой\nкоторый является 3-й тупе. Платформа всегда 2. Product_type может быть 1 для\nРабочая станция, 2 для контроллера домена, 3 для сервера.\nPlatform_version-это 3-тупе, содержащий номер версии, который\nпредназначен для определения ОС, а не обнаружения функций."
+        ],
+        [
+          "intern",
+          "`` Near '' заданная строка.\n\nЭто входит в строку в (глобальной) таблице интернированных строк, чьи\nЦель - ускорить поиск словаря. Вернуть саму строку или\nРанее интернированный объект строки с тем же значением."
+        ],
+        [
+          "is_finalizing",
+          "Вернуть True, если Python выходит."
+        ],
+        [
+          "set_asyncgen_hooks",
+          "set_asyncgen_hooks ([firstiter] [, finalizer])\n\nУстановите финализатор для объектов Async Generators."
+        ],
+        [
+          "set_coroutine_origin_tracking_depth",
+          "Включить или отключить отслеживание происхождения для объектов Coroutine в этом потоке.\n\nОбъекты Coroutine будут отслеживать «глубину» рамки информации о трассировке\nо том, откуда они пришли, доступны в их атрибуте CR_ORIGIN.\n\nУстановите глубину 0, чтобы отключить."
+        ],
+        [
+          "set_int_max_str_digits",
+          "Установите максимальный предел цифр строковых цифр для невоичных преобразований int <--> str."
+        ],
+        [
+          "setprofile",
+          "setProfile (функция)\n\nУстановите функцию профилирования.  Он будет вызван на каждом вызове функции\nи вернуться.  Смотрите главу Profiler в руководстве библиотеки."
+        ],
+        [
+          "setrecursionlimit",
+          "Установите максимальную глубину стека интерпретатора Python на n.\n\nЭтот предел предотвращает бесконечную рекурсию, вызывая переполнение C\nСток и сбоя питона.  Максимально возможным ограничением является платформа-\nзависимый"
+        ],
+        [
+          "setswitchinterval",
+          "Установите идеальную задержку переключения потока внутри интерпретатора Python.\n\nФактическая частота переключающих потоков может быть ниже, если\nИнтерпретатор выполняет длинные последовательности бесперебойного кода\n(Это специфичная для реализации и зависит от рабочей нагрузки).\n\nПараметр должен представлять желаемую задержку переключения в секундах\nТипичное значение составляет 0,005 (5 миллисекунд)."
+        ],
+        [
+          "settrace",
+          "settrace (функция)\n\nУстановите функцию трассировки глобальной отладки.  Это будет вызвано на каждый\nфункциональный вызов.  Смотрите главу отладчика в руководстве библиотеки."
+        ],
+        [
+          "unraisablehook",
+          "Обрабатывать неизменное исключение.\n\nУ несерьезного аргумента есть следующие атрибуты:\n\n* exc_type: тип исключения.\n* Exc_value: значение исключения, не может быть.\n* exc_traceback: исключение Traceback, не может быть.\n* err_msg: сообщение об ошибке, не может быть.\n* Объект: объект, вызывающий исключение, может быть ни один."
+        ]
+      ]
+    }
+  ]
+}
