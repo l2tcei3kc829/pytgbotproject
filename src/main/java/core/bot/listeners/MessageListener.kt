@@ -31,8 +31,16 @@ fun onMessage(message: Message) {
             flag = true
         }
         if (!flag){
-            val term = findTermByText(message.text)
-            val resp = if (term != null) "*${term.name}*\n\n${term.desc}\nПример:\n```\n${term.example}\n```" else "Не найдено."
+            val text = message.text
+            val term = findTermByText(text)
+            val resp = if (term != null) "*${term.name}*\n\n${term.desc}\nПример:\n```\n${term.example}\n```" else
+                "Не найдено. Возможно вы имели в виду что-либо из этого:\n${
+                    mutableListOf<String>().apply { Vars.dicts?.each { it.entries.forEach { pair -> add(pair.first) }} }
+                        .apply { sortBy { levenshteinDst(it, text) } }
+                        .subList(0, 6)
+                        .joinToString(separator = ", ") { "`$it`" }
+                    
+                }"
             message.reply(resp)
         }
     }
@@ -55,7 +63,7 @@ private fun prepareCallback(message: Message, target: String?, module: String, i
         thread(isDaemon = true) {
             val resp = try {
                 val start = Time.millis()
-                competition.getResponse(msg("Опиши функцию (или класс) \"$target\" из Python из модуля \"$module\", приведи недлинный пример кода. Лимит 2000 символов. Ответь только недлинным описанием функции, без вводных слов. Используй Markdown только для блоков кода и названия функции. На русском языке."), withContext = false)[0]
+                competition.getResponse(msg("Опиши функцию (или класс) \"$target\" из Python из модуля \"$module\", приведи недлинный пример кода. Лимит 2000 символов. Ответь только недлинным описанием функции, без вводных слов. Используй Markdown только для блоков кода и названия функции. Разрешено использовать искключительно следующий Markdown: `text`\n```python\ntext\n```\n На русском языке."), withContext = false)[0]
                     .also {
                         cache["$module:$target"] = it
                         val elapsed = Time.millis() - start
