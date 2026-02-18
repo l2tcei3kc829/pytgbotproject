@@ -63,7 +63,7 @@ private fun prepareCallback(message: Message, target: String?, module: String, i
         thread(isDaemon = true) {
             val resp = try {
                 val start = Time.millis()
-                competition.getResponse(msg("Опиши функцию (или класс) \"$target\" из Python из модуля \"$module\", приведи недлинный пример кода. Лимит 2000 символов. Ответь только недлинным описанием функции, без вводных слов. Используй Markdown только для блоков кода и названия функции. Разрешено использовать искключительно следующий Markdown: `text`\n```python\ntext\n```\n На русском языке."), withContext = false)[0]
+                competition.getResponse(msg("Опиши функцию (или класс) \"$target\" из Python из модуля \"$module\", приведи недлинный пример кода. Лимит 2000 символов. Ответь только недлинным описанием функции, без вводных слов. Используй Markdown только для блоков кода и названия функции. Разрешено использовать исключительно следующий Markdown: `text`\n```python\ntext\n```\n На русском языке."), withContext = false)[0]
                     .also {
                         cache["$module:$target"] = it
                         val elapsed = Time.millis() - start
